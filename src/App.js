@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+const listOfusers = [
+  { username: 'Jon', genrePref: 'rock' },
+  { username: 'Lucy', genrePref: 'pop' },
+  { username: 'Mike', genrePref: 'rock' },
+  { username: 'Luke', genrePref: 'house' },
+  { username: 'James', genrePref: 'house' },
+  { username: 'Dave', genrePref: 'bass' },
+  { username: 'Sarah', genrePref: 'country' },
+  { username: 'Natalie', genrePref: 'bass' }]
 function App() {
+  const listMap=listOfusers.map(user=>{
+    const itemvalues=`${user.username} genre fav ${user.genrePref}`;
+    return(
+      <li>{itemvalues}</li>
+    )
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ul>{listMap}</ul>
   );
 }
 
