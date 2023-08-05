@@ -11,7 +11,7 @@ const Form = () => {
     return (
     <form onSubmit={handleSubmit}>
         <label htmlFor="username">username</label>
-        <input type="text" value={value} onChange={e=> setValue(e.target.value)}/>
+        <input id="username" type="text" value={value} onChange={e=> setValue(e.target.value)}/>
         <input disabled={!value} type="submit" />
     </form>
   )
